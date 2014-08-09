@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initial_balance: 9.99
+  final_balance: 9.99
+  current_balance: 9.99
+  account_id: 1
+  month: 1
+
+two:
+  initial_balance: 9.99
+  final_balance: 9.99
+  current_balance: 9.99
+  account_id: 1
+  month: 1
