@@ -15,10 +15,12 @@ class AccountRecordsController < ApplicationController
   # GET /account_records/new
   def new
     @account_record = AccountRecord.new
+    @accounts = Account.all
   end
 
   # GET /account_records/1/edit
   def edit
+    @accounts = Account.all
   end
 
   # POST /account_records
