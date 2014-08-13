@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :companies
+
   resources :account_records
 
   resources :monthly_balances
