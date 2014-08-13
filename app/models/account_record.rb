@@ -1,9 +1,11 @@
 class AccountRecord < ActiveRecord::Base
+
   belongs_to :account
   belongs_to :monthly_balance
+
   after_create :update_monthly_balance
   after_update :update_monthly_balance
-  
+
 
   private
   def update_monthly_balance
@@ -15,8 +17,8 @@ class AccountRecord < ActiveRecord::Base
     end
 
     monthly_balance.current_balance += amount if record_type == "DEBIT"
-    monthly_balance.current_balance -= amount if record_type == "CREDIT"   
+    monthly_balance.current_balance -= amount if record_type == "CREDIT"
     monthly_balance.save
-  end 
-  
+  end
+
 end

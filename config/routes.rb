@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :companies
+
   resources :account_records
 
   resources :monthly_balances
