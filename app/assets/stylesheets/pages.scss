@@ -5,24 +5,24 @@
 /* centered columns styles */
 
 .row-centered {
-  text-align:center;
+  text-align: center;
 }
 
 .col-centered {
-  display:inline-block;
-  float:none;
+  display: inline-block;
+  float: none;
   /* reset the text-align */
-  text-align:left;
+  text-align: left;
   /* inline-block space fix */
-  margin-right:-4px;
+  margin-right: -4px;
 }
 
 .navbar h4 {
-  color:rgb(255,255,255);
+  color: rgb(255,255,255);
 }
 
 a.navbar-link {
-  color:rgb(255,255,255);
+  color: rgb(255,255,255);
   font-size: 18px;
   font-weight: bold;
 }
@@ -33,15 +33,15 @@ a.navbar-link:hover {
 
 h1.header {
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
-  font-size:70px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 70px;
   padding-top: 100px;
   text-align: center;
 }
 
 h2.sub-header {
   text-align: center;
-  font-size:25px;
+  font-size: 25px;
   color: rgb(200,200,200);
 }
 
