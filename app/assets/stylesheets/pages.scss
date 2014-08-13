@@ -3,59 +3,74 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* centered columns styles */
-    .row-centered {
-      text-align:center;
-    }
-    .col-centered {
-      display:inline-block;
-      float:none;
-      /* reset the text-align */
-      text-align:left;
-      /* inline-block space fix */
-      margin-right:-4px;
-    }
 
-    .navbar h4 {
-      color:rgb(255,255,255);
-      font-weight: bold;
-    }
-    a.navbar-link {
-      color:rgb(255,255,255);
-      font-weight: bold;
-    }
+.row-centered {
+  text-align:center;
+}
 
-    a.navbar-link:hover {
-    	background-color: transparent !important; 
-    }
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
 
-    h1.header {
-      text-align: center;
-      font-size:70px;
-      color: white;
-    }
+.navbar h4 {
+  color:rgb(255,255,255);
+}
 
-    h2.sub-header {
-      text-align: center;
-      font-size:25px;
-      color: rgb(200,200,200);
-    }
-    div.main {
-      background-image:url('home.jpg');
-      min-height:600px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .what-is-container p {
-      font-size:20px;
-    }
-    .benefits-container {
-      background-color:rgb(33, 51, 56);
-      color:rgb(255,255,255);
-    }
-    .benefits-container p{
-      font-size:17px;
-    }
-    section h2 {
-      font-size:xx-large;
+a.navbar-link {
+  color:rgb(255,255,255);
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    }
+a.navbar-link:hover {
+  background-color: transparent !important; 
+}
+
+h1.header {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-size:70px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+h2.sub-header {
+  text-align: center;
+  font-size:25px;
+  color: rgb(200,200,200);
+}
+
+div.main {
+  background-image:url('home.jpg');
+  min-height:600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.what-is-container p {
+  font-size:20px;
+}
+
+.benefits-container {
+  background-color:rgb(33, 51, 56);
+  color:rgb(255,255,255);
+}
+
+.benefits-container p{
+  font-size:17px;
+}
+
+section h2 {
+  font-size:xx-large;
+}
+
+.brand {
+    color: white;
+    font: 21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @media (min-width: $screen-md-min) { font-size: 25px; }
+}

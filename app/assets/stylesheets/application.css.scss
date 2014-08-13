@@ -2,3 +2,18 @@
 @import "bootstrap";
 @import "account_records.scss";
 @import "pages.scss";
+
+/* Navbar style */
+
+.navbar.navbar-default {
+	background-color: #142935;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+	font: 21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-default .navbar-nav li a {
+	color: #fff;
+}
