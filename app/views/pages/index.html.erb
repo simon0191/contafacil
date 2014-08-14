@@ -33,9 +33,9 @@
     </header>
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h1 class="header">Hacemos la contabilidad fácil</h1>
+        <div class="row row-centered">
+          <div class="col-xs-12 col-centered">
+            <h1 class="header">Contabilidad fácil para pymes</h1>
           </div>
         </div>
         <div class="row">
@@ -44,29 +44,33 @@
           </div>
         </div>
       </div>
-      <div class="row row-centered">
-        <div class="col-lg-2 col-sm-4 col-xs-6 col-centered signup-form-container">
-          <form role="form">
-            <div class="form-group">
-              <input id="name" class="form-control" placeholder="Nombre*"/>
-              <span id="name-error" class="label label-danger" style="display:none;"></span>
-            </div>
-            <div class="form-group">
-              <input id="email" class="form-control" placeholder="Email*"/>
-              <span id="email-error" class="label label-danger" style="display:none;"></span>
-            </div>
-            <div class="form-group">
-              <input id="phone" class="form-control" placeholder="Teléfono"/>
-              <span id="phone-error" class="label label-danger" style="display:none;"></span>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-success form-control" placeholder="Nombre">
-              ¿Quiero saber más!
-              </button>
-            </div>
-          </form>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 signup-form-container">
+            <form role="form" class="">
+              <div class="row-centered">
+                <div class="form-group col-xs-6 form-col">
+                  <input id="name" class="signup-input form-control pull-right" placeholder="Nombre*"/>
+                  <span id="name-error" class="label label-danger" style="display:none;"></span>
+                </div>
+                <div class="form-group col-xs-6 form-col">
+                  <input id="email" class="signup-input form-control  pull-left" placeholder="Email*"/>
+                  <span id="email-error" class="label label-danger" style="display:none;"></span>
+                </div>
+              </div>
+              <div class="row row-centered">
+                <div class="form-group col-centered">
+                  <button type="submit" class="btn btn-success form-control signup-submit" placeholder="Nombre">
+                  ¿Quiero saber más!
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
         </div>
       </div>
+
     </main>
   </div>
   <!-- Modal -->
