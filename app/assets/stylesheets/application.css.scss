@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "account_records.scss";
 @import "pages.scss";
+@import "registries.css.scss";
 
 /* Navbar style */
 
@@ -20,4 +21,8 @@
 
 .navbar-default .navbar-nav li a:hover {
 	color: #387DA4;
+}
+
+.logo-contafacil{
+	color: white;
 }

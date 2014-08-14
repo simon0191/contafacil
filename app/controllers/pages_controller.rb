@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
 	def index
-		@home_banner = true
+		@has_navbar = false
 	end
 
 end

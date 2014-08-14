@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :accounts
 
+  get 'signup/company_registry' => 'registries#company_registry'
+
   root 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
