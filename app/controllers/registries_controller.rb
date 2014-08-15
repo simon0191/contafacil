@@ -1,7 +1,7 @@
 class RegistriesController < ApplicationController
 
 	def company_registry
-		@has_navbar = false
+		@skip_navbar = true
 	end
 
 end

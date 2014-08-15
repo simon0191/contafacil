@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-
+	
 	def index
-		@has_navbar = false
+		@skip_navbar = true
 	end
 
 end
