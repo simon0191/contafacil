@@ -1,4 +1,3 @@
-<%= stylesheet_link_tag  "application", :media => "all" %>
 <nav class="registry-navbar">
 	<div class="container">
 		<div class="row registry-header">
@@ -11,7 +10,6 @@
 	</div>
 </nav>
 <div class="container">
-	<!-- END Header -->
 	<div class="row row-centered registry-step-header">
 		<div class="col-xs-8 text-left col-centered">
 			<h2 class="registry-title">
@@ -41,7 +39,7 @@
 				</div>
 				<div class="row row-centered">
 					<div class="col-xs-4 col-centered text-center">
-						<button type="submit" class="registry-next-step-btn btn btn-default">Siguiente paso</button>
+						<%=link_to "Siguiente paso", "/signup/accounts_registry", class: "registry-next-step-btn btn btn-default" %>
 					</div>
 
 				</div>
