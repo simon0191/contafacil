@@ -53,19 +53,6 @@ div.main {
   background-repeat: no-repeat;
 }
 
-.what-is-container p {
-  font-size:20px;
-}
-
-.benefits-container {
-  background-color:rgb(33, 51, 56);
-  color:rgb(255,255,255);
-}
-
-.benefits-container p{
-  font-size:17px;
-}
-
 section h2 {
   font-size:xx-large;
 }
@@ -76,7 +63,8 @@ section h2 {
     @media (min-width: $screen-md-min) { font-size: 25px; }
 }
 
-/** signup form*/
+/* Signup Form */
+
 .form-col{
   padding: 3px;
 }
@@ -90,7 +78,7 @@ section h2 {
   text-align: center;
   border-radius: 6px;
   border: 2px solid #c6c6c6;
-  font-size:18px;
+  font-size: 18px;
 }
 .signup-input:focus{
     border: 2px solid #84c51f;
@@ -103,16 +91,47 @@ section h2 {
   border-radius: 6px;
   border: 2px solid #84c51f;
   background-color: #84c51f;
-  font-size:18px;
-  width:446px;
+  font-size: 18px;
+  width: 446px;
 }
 .signup-submit:hover{
     border: 2px solid #449d44;
     background-color: #84c51f;
 }
 
-/* Qué es container */
+/* What is it container */
 
 .what-is-container {
   margin-bottom: 40px;
+}
+
+.what-is-container p {
+  font-size: 20px;
+}
+
+/* Benefits container */
+
+.benefits-container {
+  background-color: rgb(33, 51, 56);
+  color: rgb(255,255,255);
+}
+
+.benefits-container p{
+  font-size: 17px;
+}
+
+/* Invoice container */
+
+.invoice-container {
+  background-color: #359eab;
+  color: #fff;
+}  
+
+.feature-box {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}  
+
+.invoice-container p {
+  font-size: 20px ;
 }
