@@ -25,4 +25,11 @@
 }
 
 /* Account creation */
-
+.add-account-btn {
+  @extend .btn;
+  @extend .btn-info;
+  @extend .btn-default;
+}
+.btn-container {
+  margin: 10px 0px;
+}

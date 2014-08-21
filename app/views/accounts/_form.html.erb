@@ -1,25 +1,38 @@
-<%= form_for(@account) do |f| %>
-  <% if @account.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <%= form_for(@account) do |f| %>
+        <% if @account.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
 
-      <ul>
-      <% @account.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+            <% @account.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field form-group">
+          <%= f.label :puc_id %><br>
+          <%= f.number_field :puc_id ,:html => {:class => "form-control"} %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name ,:html => {:class => "form-control"} %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :account_type %><br>
+          <%= select(:account,:account_type, options_for_select([
+            ['ACTIVO','ASSETS'], ['PASIVO','LIABILITIES'],['PATRIMONIO','EQUITY'],['GASTOS','EXPENSES'],['INGRESOS','REVENUE']]
+            ),{}, :class => "form-control") %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  </div>
 
-  <div class="field">
-    <%= f.label :puc_id %><br>
-    <%= f.number_field :puc_id %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
