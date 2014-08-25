@@ -30,6 +30,11 @@
   @extend .btn-info;
   @extend .btn-default;
 }
+.create-account-btn {
+  @extend .btn;
+  @extend .btn-success;
+  @extend .btn-default;
+}
 .btn-container {
   margin: 10px 0px;
 }

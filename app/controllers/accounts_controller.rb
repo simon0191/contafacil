@@ -32,6 +32,8 @@ class AccountsController < ApplicationController
         format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
+        print "simon"
+        print @account.to_json
         format.json { render json: @account.errors, status: :unprocessable_entity }
       end
     end

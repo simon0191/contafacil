@@ -1,55 +1,59 @@
-<nav class="registry-navbar">
-	<div class="container">
-		<div class="row registry-header">
-			<div class="col-xs-6 pull-left">
-				<h3 class="logo-contafacil">
-					Conta<strong>fácil</strong>
-				</h3>
-			</div>
-		</div>
-	</div>
-</nav>
-<div class="container">
-	<div class="row row-centered registry-step-header">
-		<div class="col-xs-8 text-left col-centered">
-			<h2 class="registry-title">
-				Paso 2 de 3: Crea tus cuentas
-			</h2>
-		</div>
-	</div>
-	<!-- END registry-step-header -->
-	<div class="row row-centered">
-		<div class="col-xs-8 col-centered">
-
-			<ul id="accounts-registry-tab-pane" class="nav nav-tabs" role="tablist">
-			  <li class="active"><a href="#all" data-toggle="tab">Todos</a></li>
-			  <li><a href="#assets" data-toggle="tab">Activos</a></li>
-			  <li><a href="#liabilities" data-toggle="tab">Pasivos</a></li>
-			  <li><a href="#equity" data-toggle="tab">Patrimonio</a></li>
-			</ul>
-
-			<div class="btn-container">
-				<button class="add-account-btn">Nueva cuenta +</button>
-			</div>
-			<div id="accounts-registry-tab-content" class="tab-content">
-		        <div class="tab-pane active" id="all">
-		        	<ul>
-			        	<% @accounts.each do |a|%>
-			        	  <li id="<%= 'account-'+a.id.to_s %>"><%= a.name %> - <%= a.puc_id %></li>
-			        	<% end %>
-		        	</ul>
-		        </div>
-
-		        <% ['ASSETS','LIABILITIES','EQUITY','EXPENSES','REVENUE'].each do |account_type|%>
-		                <div class="tab-pane" id="<%= account_type.downcase %>">
-		                	<ul>
-		                		<% get_accounts_by_type(account_type).each do |a|%>
-		        	        	  <li id="<%= 'account-'+a.id.to_s %>"><%= a.name %> - <%= a.puc_id %></li>
-		        	        	<% end %>
-		                	</ul>
-		                </div>
-		        <% end %>
-			</div>
-		</div>
-	</div>
+<div id="account-creation">
+  <nav class="registry-navbar">
+    <div class="container">
+      <div class="row registry-header">
+        <div class="col-xs-6 pull-left">
+          <h3 class="logo-contafacil">
+          Conta<strong>fácil</strong>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row row-centered registry-step-header">
+      <div class="col-xs-8 text-left col-centered">
+        <h2 class="registry-title">
+          Paso 2 de 3: Crea tus cuentas
+        </h2>
+      </div>
+    </div>
+    <!-- END registry-step-header -->
+    <div class="row row-centered">
+      <div class="col-xs-8 col-centered">
+        <ul id="accounts-registry-tab-pane" class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#all" data-toggle="tab">Todos</a></li>
+          <li><a href="#assets" data-toggle="tab">Activos</a></li>
+          <li><a href="#liabilities" data-toggle="tab">Pasivos</a></li>
+          <li><a href="#equity" data-toggle="tab">Patrimonio</a></li>
+        </ul>
+        <div class="btn-container">
+          <button class="add-account-btn" data-toggle="modal" data-target="#account-creation-modal">Nueva cuenta +</button>
+        </div>
+        <div id="accounts-registry-tab-content" class="tab-content">
+          <div class="tab-pane active" id="all">
+            <ul>
+              <% @accounts.each do |a|%>
+              <li id="<%= 'account-'+a.id.to_s %>"><%= a.name %> - <%= a.puc_id %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% ['ASSETS','LIABILITIES','EQUITY','EXPENSES','REVENUE'].each do |account_type|%>
+          <div class="tab-pane" id="<%= account_type.downcase %>">
+            <ul>
+              <% get_accounts_by_type(account_type).each do |a|%>
+              <li id="<%= 'account-'+a.id.to_s %>"><%= a.name %> - <%= a.puc_id %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      new View.AccountCreation();
+    });
+  </script>
 </div>
